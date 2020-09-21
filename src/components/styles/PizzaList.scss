@@ -1,0 +1,31 @@
+.pizzaDiv {
+  background-image: url("https://image.shutterstock.com/image-vector/pizzaflat-coloring-styleillustration-children-260nw-761800429.jpg");
+  padding-bottom: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.PizzaSmallDiv {
+  background-color: #aeb3b6;
+  color: rgb(223, 21, 21);
+  border-style: solid;
+  opacity: 0.9;
+}
+
+h1 {
+  color: green;
+  font-weight: bold;
+  font-size: 50px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.likeButton {
+  margin-top: 10px;
+  background-color: rebeccapurple;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+  width: 30%;
+}

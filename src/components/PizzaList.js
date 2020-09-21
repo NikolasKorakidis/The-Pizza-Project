@@ -1,5 +1,6 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
+import "./styles/PizzaList.scss";
 
 const selectUser = (reduxState) => {
   return reduxState.user;
@@ -12,9 +13,11 @@ export default function PizzaList() {
   const dispatch = useDispatch();
 
   return (
-    <div>
+    <div className="pizzaDiv">
       <h1>Pizza Explorer</h1>
-      Welcome back, <strong>{user.name}</strong>! Your favorite pizzas:
+      <h3>
+        Welcome back, <strong>{user.name}</strong>! Your favorite pizzas:
+      </h3>
       <ul>
         {[...pizza]
           .sort((a, b) => a.bought - b.bought)
@@ -26,10 +29,10 @@ export default function PizzaList() {
               });
             };
             return (
-              <div key={pizza.id}>
+              <div className="PizzaSmallDiv" key={pizza.id}>
                 <li>{pizza.name}</li>
                 <li>{pizza.description}</li>
-                <button onClick={toggle}>
+                <button className="likeButton" onClick={toggle}>
                   {user.favorites.includes(pizza.id) ? "♥" : "♡"}
                 </button>
               </div>
